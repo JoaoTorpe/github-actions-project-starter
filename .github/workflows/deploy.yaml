@@ -38,7 +38,7 @@ jobs:
           TIMEOUT: ${{vars.URL_CHECKER_TIMEOUT}}
         run: |
           for script in scripts/**/*.js
-            node "$script" --timeout "$TIMEOUT"
+            node "$script" --timeout "$TIMEOUT" --ignore-scripts
           done
 
 
