@@ -37,6 +37,7 @@ jobs:
         env: 
           TIMEOUT: ${{vars.URL_CHECKER_TIMEOUT}}
         run: |
+          shopt -s globstar nullglob
           for script in script/**/*.js; do
             node "$script" --timeout "$TIMEOUT" 
           done
