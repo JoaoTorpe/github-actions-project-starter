@@ -34,9 +34,11 @@ jobs:
         run: npm ci
         
       - name: Running scripts
+        env: 
+          TIMEOUT: ${{vars.URL_CHECKER_TIMEOUT}}
         run: |
           for script in scripts/**/*.js
-            node "$script"
+            node "$script" --timeout "$TIMEOUT"
           done
 
 
