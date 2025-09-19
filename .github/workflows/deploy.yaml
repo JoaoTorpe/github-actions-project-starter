@@ -58,11 +58,7 @@ jobs:
           cache: 'npm'
           
       - name: Installing dependencies
-        run: |
-          # Instala dependências específicas para compilar sharp
-            sudo apt-get update
-            sudo apt-get install -y libvips-dev
-            npm ci --ignore-scripts=false 
+        run: npm install --ignore-scripts=false 
             
 
       - name: Build static pages
