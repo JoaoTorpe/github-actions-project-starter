@@ -58,7 +58,7 @@ jobs:
           cache: 'npm'
           
       - name: Installing dependencies
-        run: npm ci --ignore-scripts
+        run: npm install --ignore-scripts
 
       - name: Build static pages
         env: 
