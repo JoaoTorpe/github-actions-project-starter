@@ -58,7 +58,9 @@ jobs:
           cache: 'npm'
           
       - name: Installing dependencies
-        run: npm install --ignore-scripts=false 
+        run: | 
+          npm update pagefind
+          npm install --ignore-scripts=false 
             
 
       - name: Build static pages
