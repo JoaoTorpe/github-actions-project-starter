@@ -97,7 +97,7 @@ jobs:
          path: _site
 
      - name: GitHub CLI Auth
-       run: gh auth --with-token <<< ${{secrets.GITHUB_TOKEN}}       
+       run: gh auth --with-token <<< "${{secrets.GITHUB_TOKEN}}"      
 
      - name: Create issue
        run: |
